@@ -1,0 +1,10 @@
+[package]
+name = "rust_chip8"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chip8_core = { path = "./core" }
+sdl2 = "^0.35.2"
+
+

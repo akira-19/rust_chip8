@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: '.'
+    ports:
+      - 7070:7070
+    volumes:
+      - .:/app:cached
+    tty: true
+      # - cargo-cache:/usr/local/cargo/registry
+    command: /bin/sh -c "cargo watch -x run"
+
+# volumes:
+  # cargo-cache:
