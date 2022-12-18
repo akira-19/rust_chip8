@@ -264,6 +264,13 @@ impl Emu {
                         }
                     }
                 }
+
+                // Populate VF register
+                if flipped {
+                    self.v_reg[0xF] = 1;
+                } else {
+                    self.v_reg[0xF] = 0;
+                }
             }
             (0xE, _, 9, 0xE) => {
                 let x = digit2 as usize;
